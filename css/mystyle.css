@@ -1,0 +1,238 @@
+
+/* CSS Document */
+
+
+html {
+        background: transparent!important;
+}
+
+body {
+	margin: 1em auto;
+	max-width: 65em;
+	font-family: Comic Sans MS;
+	color: #B25A42;/*as in project plan*/
+}
+
+
+h1, main, aside, main svg {
+	border-radius: 0 8px 8px;
+	border: 1px solid;
+	padding: 1em;
+	margin: 1em;
+}
+
+/* black color is not in harmony with the rest of the colors
+h2 {
+  color: black;
+}
+*/
+
+h1::after {
+  content: 'Logo';
+}
+
+.recommendation  {
+  border-style:solid;
+  font-size: 1.2em; 
+  font-style: italic;
+  color: black;
+}
+
+}
+#calltoaction button {
+  text-align: left;
+  background-color: gold;
+  color:#B25A42;
+  border-color: black;
+}
+#calltoaction a:hover button {
+  color: #B25A42;
+  background-color: goldenrod;
+  border-color: black;
+}
+
+
+/* FOOTER IMPRINT */
+#footer-imprint {
+  font-size: 0.6em;
+  font-style:normal;
+  text-align:left;
+  text-transform:uppercase;
+  text-align: right;
+  }
+#footer-imprint li{
+  list-style: none;
+ }
+#footer-imprint li a {
+  text-decoration: none;
+ }
+
+
+address {
+  font-size: 0.6em;
+  font-style:normal;
+  text-align:left;
+  text-transform:uppercase;
+}
+
+
+article img {
+	width: 33%;
+	float: right;
+	margin-left: 0.2em;
+}
+
+figure {
+  display: inline-block;
+  width: 30%;
+  margin: 0.2em;
+}
+figure img {
+  width: 100%; /*image size*/
+}
+figure figcaption {
+  font-style: italic;
+}
+
+
+main {
+	display: block;     /* for IE */	
+	min-height: 400px;
+}
+
+aside  {
+	background: #EFCD76;/*fixme*/
+} 
+
+
+/* Layout */
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Mobile first */
+header, nav, nav a, article, section, aside , footer {
+  border-radius: 0px 0.5em 0.5em;
+  border: 1px solid;
+  padding: 1em;
+  margin: 1em;
+  flex: 1 100%;
+}
+
+header {
+  background: #EFCD76;
+  border-color: black;
+  display: flex;
+  flex-flow: row wrap;
+}
+header * {
+  flex: 1 1 0%;
+  margin: 0 1em;
+}
+header img {
+  flex: 0 0 150px;
+  margin-right: 20px;
+}
+header nav {
+  flex: 1 1 100%;
+  margin: .5em 2em;
+  border-color: black;
+}
+nav ul, nav li{
+  margin: 0 0.5em;
+  padding: 0 0.5em;
+  border: 0;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  list-style-type:none;
+  margin: 1.3em 0;
+  flex: 1 1 100%;
+}
+nav a {
+  display:inline-block;
+  width:95%;
+  background: #fffbf0;
+  border: 1px solid #dfac20;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+}
+nav a:hover, nav a:focus {
+  background-color: #dfac20;
+}
+
+nav a[aria-current=page] {
+	color:black;
+	font-weight:bold;
+}
+section {
+  background: #EFCD76;
+  border-color: black;
+}
+article {
+  background: #EFCD76;
+  border-color: black;
+}
+aside  {
+  background: #EFCD76;
+  border-color: black;
+}
+footer {
+  background: #EFCD76;
+  border-color: black;
+  display: flex;
+  flex-flow: row wrap;
+}
+footer * {
+  flex: 1 1 0%;
+  justify-content: space-between;
+}
+footer p:last-child {
+  text-align: right;
+}
+/* for Smart Phones and Tablets*/
+@media all and (min-width: 35em) {
+header img {
+  margin-right: 50px;
+}
+nav ul {
+  flex-direction: row;
+}
+nav li {
+  margin: 0 10px;
+  flex: 1 1 0%;
+}
+article {
+  order: 2;
+}
+
+aside {
+  flex: 1 auto;
+  order: 4;
+}
+
+
+
+footer {
+  order: 5;
+}
+}
+
+/* Large screens */
+@media all and (min-width: 50em) {
+  article {    /* Article will be 2.5x width as both asides */
+    order: 3;
+    flex: 3 1 0%;
+  }
+  aside {
+    flex: 1 1 0%;
+  }
+
+
+}
