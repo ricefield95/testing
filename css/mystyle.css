@@ -2,6 +2,7 @@
 /* CSS Document */
 
 
+
 html {
         background: transparent!important;
 }
@@ -38,17 +39,21 @@ h1::after {
   color: black;
 }
 
-}
+
 #calltoaction button {
   text-align: left;
-  background-color: gold;
-  color:#B25A42;
-  border-color: black;
+  background-color: #B25A42;
+  color: black;
+  border-color: #eca305;
+  padding: 14px 40px;
+  border-radius: 12px;
 }
 #calltoaction a:hover button {
-  color: #B25A42;
+  color: #484554;
   background-color: goldenrod;
-  border-color: black;
+  border-color: gold;
+  padding: 14px 40px;
+  border-radius: 12px;
 }
 
 
@@ -113,7 +118,18 @@ body {
 }
 
 /* Mobile first */
-header, nav, nav a, article, section, aside , footer {
+
+nav, nav{
+  border-radius: 0px 0.5em 0.5em;
+  border: 1px solid;
+  padding: 1em;
+  margin: 1em;
+  flex: 1 100%;
+  background-color: #B25A42
+}
+
+
+header, nav a, article, section, aside , footer {
   border-radius: 0px 0.5em 0.5em;
   border: 1px solid;
   padding: 1em;
